@@ -1,0 +1,6 @@
+type: "position_controllers/JointGroupPositionController"
+joints:
+ - base_to_left_thigh
+ - base_to_right_thigh
+ - left_thigh_to_left_shank
+ - right_thigh_to_right_shank

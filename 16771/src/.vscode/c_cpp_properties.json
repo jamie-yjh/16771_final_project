@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/cerlab/Xiao/workspace/devel/include/**",
+        "/home/cerlab/gazebo_ros_pkgs/devel/include/**",
+        "/opt/ros/kinetic/include/**",
+        "/home/cerlab/Xiao/workspace/src/denso_robot_ros/bcap_core/include/**",
+        "/home/cerlab/Xiao/workspace/src/denso_robot_ros/bcap_service/include/**",
+        "/home/cerlab/Xiao/workspace/src/denso_robot_ros/denso_robot_control/include/**",
+        "/home/cerlab/Xiao/workspace/src/denso_robot_ros/denso_robot_core/include/**",
+        "/home/cerlab/gazebo_ros_pkgs/src/gazebo_ros_pkgs/gazebo_plugins/include/**",
+        "/home/cerlab/gazebo_ros_pkgs/src/gazebo_ros_pkgs/gazebo_ros/include/**",
+        "/home/cerlab/gazebo_ros_pkgs/src/gazebo_ros_pkgs/gazebo_ros_control/include/**",
+        "/home/cerlab/Xiao/workspace/src/welding_sensing_ros/manipulation/include/**",
+        "/home/cerlab/Xiao/workspace/src/welding_robot_simulation/velodyne_simulator/velodyne_gazebo_plugins/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ]
+}
