@@ -3,15 +3,15 @@ close all;
 %% Set up robot parameters
 syms Ip Iw IM Mw m M;
 syms d r l;
-Ip = 0.1;
-Iw = 0.001;
-IM = 0.1;
-Mw = 0.2;
+Ip = 0.15;
+Iw = 0.5 * 0.4 * 0.1^2;
+IM = 0;
+Mw = 0.4;
 m = 10;
-M = 0.8;
+M = 0;
 r = 0.1;
-l = 0.25;
-d = 0.3;
+l = 0.7;
+d = 0.35;
 params = struct(...
     'Ip',                Ip, ...
     'Iw',                Iw,...
@@ -45,6 +45,7 @@ state(6)  = 0;    %x_dot
 
 %% Loop through the timesteps and update
 history = zeros(6,max_iter-1);
+tau = zeros(6,max_iter-1);
 for iter = 1:max_iter-1
     
     theta = state(1);
@@ -53,8 +54,9 @@ for iter = 1:max_iter-1
     x = state(3);
     
     
-    taul = 10*alpha + 1 * alpha_dot;
-    taur = 10*alpha + 1 * alpha_dot;
+    taul = 10*alpha + 0 * alpha_dot;
+    taur = 10*alpha + 0 * alpha_dot;
+    tau(:,iter) = taul;
     dr = 0;
     dl = 0;
     timeint = time_vec(iter:iter+1);
@@ -78,3 +80,9 @@ title("x")
 subplot(3,2, 4);
 plot(1:max_iter-1,history(6,:));
 title("x-dot")
+figure()
+plot(1:max_iter-1,tau);
+hold on
+plot(1:max_iter-1,history(2,:));
+hold on
+plot(1:max_iter-1,history(5,:));
