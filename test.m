@@ -53,9 +53,11 @@ for iter = 1:max_iter-1
     alpha_dot = state(5);
     x = state(3);
     
+    kp = 10;
+    kd = 1;
     
-    taul = 10*alpha + 0 * alpha_dot;
-    taur = 10*alpha + 0 * alpha_dot;
+    taul = kp*alpha + kd * alpha_dot;
+    taur = kp*alpha + kd * alpha_dot;
     tau(:,iter) = taul;
     dr = 0;
     dl = 0;
