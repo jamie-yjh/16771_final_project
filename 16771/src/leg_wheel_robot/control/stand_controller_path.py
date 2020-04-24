@@ -216,7 +216,7 @@ if __name__ == '__main__':
             B = np.zeros((6,2))
             t3 = -m*l/((m+2*mw+M)*I+(M+2*mw)*m*l**2)
             t4 = 1/r * (I+m*l**2)/((m+2*mw+M)*I+(M+2*mw)*m*l**2)
-            t5 = 2*d/(r*2*Iw+Ip)
+            t5 = 2*d/(r*(2*Iw+Ip))
 
             B[1,0] = t3
             B[3,0] = t4
